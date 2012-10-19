@@ -177,3 +177,18 @@ body {
     background: red;
   }
 }
+
+@retina-screen: ~"(-webkit-min-device-pixel-ratio: 2)";
+@media @smartphone {
+  background-image: url('some-image.png');
+
+  @media @retina-screen {
+    background-image: url('some-image@2x.png');
+    background-size: 100px 50px;
+  }
+}
+
+@media @smartphone and @retina-screen {
+  background-image: url('some-other-image@2x.png');
+  background-size: 100px 50px;
+}

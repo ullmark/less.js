@@ -174,3 +174,14 @@
     background: red;
   }
 }
+@media only screen and (max-width: 200px) {
+  background-image: url('some-image.png');
+}
+@media only screen and (max-width: 200px) and (-webkit-min-device-pixel-ratio: 2) {
+  background-image: url('some-image@2x.png');
+  background-size: 100px 50px;
+}
+@media only screen and (max-width: 200px) and (-webkit-min-device-pixel-ratio: 2) {
+  background-image: url('some-other-image@2x.png');
+  background-size: 100px 50px;
+}
